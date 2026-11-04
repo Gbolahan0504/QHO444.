@@ -78,3 +78,40 @@ else:
     print("Both are equal!")
 
 
+# Activity 6: Counter
+print()
+
+# Start both counters at zero
+even_count = 0
+odd_count = 0
+
+# First number
+print("Please enter the first whole number.")
+number_one = int(input())
+if number_one % 2 == 0:
+    even_count += 1
+else:
+    odd_count += 1
+
+# Second number
+print("Please enter the second whole number.")
+number_two = int(input())
+
+
+if number_two % 2 == 0:
+    even_count += 1
+else:
+    odd_count += 1
+# Third number
+print("Please enter the third whole number.")
+number_three = int(input())
+if number_three % 2 == 0:
+    even_count += 1
+else:
+    odd_count += 1
+
+print()
+print(f"There were {even_count} even and {odd_count} odd numbers.")
+
+
+
