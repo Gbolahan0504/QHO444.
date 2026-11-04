@@ -28,7 +28,6 @@ height = float(input())
 print()
 print("How much do you weigh (in kilograms)?")
 weight = float(input())
-Michael
 
 # Calculate BMI: weight divided by height squared
 bmi = weight / height ** 2
@@ -36,3 +35,24 @@ print()
 print(f"{user_name} you are {age} years old and your bmi is {bmi:.2f}.")
 
 bmi = weight / height ** 2
+
+
+# Activity 4: Health bars using string operators
+print()
+print("Please enter the number of lives.")
+lives = int(input())
+
+print()
+print("Please enter the energy level.")
+energy = int(input())
+
+print()
+print("Please enter the shield level.")
+shield =int(input())
+
+print()
+print("Health has been set.")
+print()
+print(f"Lives:  {'♥' * lives}")
+print(f"Energy: {'♦' * energy}")
+print(f"Shield: {'♦' * shield}")
