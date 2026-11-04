@@ -9,3 +9,19 @@ if book_type == "adventure":
 
 print()
 print("Finished reading book.")
+
+
+# Activity 2: if...else statement
+print()
+print("Please enter the activity to be performed.")
+activity = input()
+print()
+
+# Check whether the activity is calculate
+if activity == "calculate":
+    print("Performing calculations...")
+else:
+    print("Performing activity...")
+
+print()
+print("Activity completed!")
