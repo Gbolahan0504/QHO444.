@@ -25,3 +25,24 @@ else:
 
 print()
 print("Activity completed!")
+
+
+# Activity 3: if...elif...else statement
+print()
+print("Towards which direction should I go (up, down, left or right)?")
+direction = input()
+print()
+
+# Work out which direction the robot should move
+if direction == "up":
+    print("I am moving in an upward direction!")
+
+elif direction == "down":
+    print("I am moving in an downward direction!")
+elif direction == "left":
+    print("I am moving to the left!")
+elif direction == "right":
+    print("I am moving to the right!")
+else:
+    print("I do not know that direction!")
+
