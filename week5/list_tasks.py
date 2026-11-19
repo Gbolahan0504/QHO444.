@@ -51,6 +51,37 @@ def run_task3():
     menu()
 
 
+
+
+# Activity 4: Populate
+
+def menu_and_input():
+    print("Please select a direction:")
+    # Get the list of directions from Activity 1
+    steps = directions()
+    # Show each direction with its index number
+    for index in range(len(steps)):
+        direction = steps[index]
+        print(f"{index}: {direction}")
+    # Read the user's choice as a whole number
+    choice = int(input())
+    # Send back the direction that matches the number chosen
+    return steps[choice]
+
+
+def run_task4():
+    # Start with an empty list to hold the route
+    route = []
+    print("Working out escape route...")
+    # Ask for a direction 5 times
+    for i in range(5):
+        direction = menu_and_input()
+        route.append(direction)
+    print(f"Escape route: {route}")
+
+
 # Only run when this file is executed directly
 if __name__ == "__main__":
-    run_task3()
+    run_task4()
+
+
