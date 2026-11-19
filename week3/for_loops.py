@@ -47,3 +47,21 @@ for level in range(2, brightness + 1, 2):
 print()
 print("Complete!")
 
+
+# Activity 4: Characters
+print()
+print("What word do you see?")
+word = input()
+print()
+print("Displaying index positions...")
+print()
+
+# Go through every index position in the word
+for position in range(0, len(word), 1):
+    # Show the index number and the character at that position
+    print(f"index {position}: {word[position]}")
+
+print()
+print("Done!")
+
+
