@@ -29,3 +29,21 @@ for remaining in range(steps, 0, -1):
 
 print()
 print("Target achieved!")
+
+
+# Activity 3: Range
+print()
+print("What level of brightness is required?")
+brightness = int(input())
+print()
+print("Adjusting brightness...")
+print()
+
+# Go up in even numbers from 2 to the level entered (+1 so it is included)
+for level in range(2, brightness + 1, 2):
+    # Show one star for each level of brightness
+    print("Brightness level: " + "*" * level)
+
+print()
+print("Complete!")
+
