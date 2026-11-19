@@ -83,4 +83,18 @@ for position in range(len(phrase) - 1, -1, -1):
 print(f"The phrase is: {reversed_phrase}")
 
 
+# Activity 6: Membership Operators
+print()
+print("What phrase do you want to print?")
+user_phrase = input()
+print()
+print("outputting...")
+print()
+print("The phrase is: ")
+
+# Take each character in the phrase one at a time and print it on its own line
+for letter in user_phrase:
+    print(letter)
+
+
 
