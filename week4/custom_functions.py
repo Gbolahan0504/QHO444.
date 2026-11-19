@@ -87,4 +87,30 @@ climb_ladder(5, 2)
 climb_ladder(2, 5)
 
 
+# Activity 1: Multiple User Defined Functions
+
+def display_ladder(steps):
+    # Draw the first side rail
+    print("| |")
+    # Add a rung and another rail for each step
+    for step in range(steps):
+        print("***")
+        print("| |")
+
+
+def create_ladder():
+    # Ask how many steps the ladder needs
+    print()
+    print("How many steps remain?")
+    steps = int(input())
+    print()
+    # Pass the number of steps to the drawing function
+    display_ladder(steps)
+
+
+# Call the second function, which calls the first one
+create_ladder()
+
+
+
 
