@@ -32,3 +32,23 @@ while avoided < obstacles:
 
 print()
 print("All obstacles have been avoided.")
+
+
+
+# Activity 3: ASCII
+print()
+print("How many bars should be charged?")
+bars = int(input())
+print()
+
+# Track how many bars have been charged so far
+charged = 0
+
+# Keep charging until we reach the number of bars asked for
+while charged < bars:
+    charged = charged + 1
+    # "\u2588" is the block character, repeated once for each charged bar
+    print("Charging: " + "\u2588 " * charged)
+
+print()
+print("The battery is fully charged.")
