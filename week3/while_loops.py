@@ -92,3 +92,26 @@ while number <= 100:
     number = number + 1
 
 print(f"...Done! The answer is {total}.")
+
+
+# Activity 6: Sum User Numbers
+print()
+print("How many numbers should I sum up?")
+how_many = int(input())
+print()
+
+# Running total of the numbers entered
+user_total = 0
+# Track how many numbers have been entered so far
+count = 0
+
+# Keep asking until we have the number of values requested
+while count < how_many:
+    print(f"Please enter number {count + 1} of {how_many}:")
+    value = int(input())
+    # Add the new number to the running total
+    user_total = user_total + value
+    count = count + 1
+
+print()
+print(f"The answer is {user_total}.")
