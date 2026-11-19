@@ -34,9 +34,40 @@ def run_task2():
     print(f"Maximum likelihood of falling: {values[1]}%")
 
 
+# Activity 3: Nested Tuples
+
+def steps():
+    # A list of tuples: each tuple holds a step name and its chance of falling
+    likelihoods = [
+        ("step 1", 50),
+        ("step 2", 38),
+        ("step 3", 27),
+        ("step 4", 99),
+        ("step 5", 4),
+    ]
+    return likelihoods
+
+
+def run_task3():
+    # Store the returned list in a local variable
+    all_steps = steps()
+    # Empty lists to sort the steps into
+    good_steps = []
+    bad_steps = []
+    # Check each step's chance of falling
+    for step in all_steps:
+        if step[1] >= 50:
+            bad_steps.append(step)
+        else:
+            good_steps.append(step)
+    print(f"Good steps: {len(good_steps)}, Bad steps: {len(bad_steps)}")
+
+
+
+
 # Only run when this file is executed directly
 if __name__ == "__main__":
-    run_task2()
+    run_task3()
 
 
 
