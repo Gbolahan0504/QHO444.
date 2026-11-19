@@ -3,6 +3,7 @@
 # Activity 1: Simple Tuple
 
 def likelihood():
+    # Chance (in %) that each step will fall
     likelihoods = (50, 38, 27, 99, 4)
     #Send back the smallest chance
     return min(likelihoods)
