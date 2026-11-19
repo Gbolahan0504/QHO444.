@@ -147,6 +147,79 @@ def run():
 run()
 
 
+# Activity 3: Word Manipulation
+
+def display_in_box(word):
+    # The border is 4 characters wider than the word, to fit "* " and " *"
+    border = "*" * (len(word) + 4)
+    print(border)
+    print(f"* {word} *")
+    print(border)
+
+
+def display_lower(word):
+    # Show the word in lower-case
+    print(word.lower())
+
+
+def display_upper(word):
+    # Show the word in upper-case
+    print(word.upper())
+
+
+def display_mirrored(word):
+    # Build the reversed word one character at a time, from the end
+    mirrored = ""
+    for position in range(len(word) - 1, -1, -1):
+        mirrored = mirrored + word[position]
+    print(f"{word} | {mirrored}")
+
+
+def repeat(word):
+    print("How many times should I repeat the word?")
+    times = int(input())
+    # Alternate: even turns in upper-case, odd turns in lower-case
+    for count in range(times):
+        if count % 2 == 0:
+            print(word.upper())
+        else:
+            print(word.lower())
+
+
+
+def run_word_program():
+    print()
+    print("Please enter a word:")
+    word = input()
+    print()
+    # Show the menu of options
+    print("Please choose an option:")
+    print("1) Display in a Box")
+    print("2) Display Lower-case")
+    print("3) Display Upper-case")
+    print("4) Display Mirrored")
+    print("5) Repeat")
+    option = input()
+    print()
+    # Call the function that matches the option chosen
+    if option == "1":
+        display_in_box(word)
+    elif option == "2":
+        display_lower(word)
+    elif option == "3":
+        display_upper(word)
+    elif option == "4":
+        display_mirrored(word)
+    elif option == "5":
+        repeat(word)
+    else:
+        print("That is not a valid option.")
+
+
+# Run the word program
+run_word_program()
+
+
 
 
 
