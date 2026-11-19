@@ -73,3 +73,22 @@ while count < length:
 
 # Move to a new line once the loop is finished
 print()
+
+
+# Activity 5: Sum 100
+print()
+print("Calculating the sum of the first 100 numbers...")
+
+# Running total starts at 0
+total = 0
+# Start counting from 1
+number = 1
+
+# Keep going until we have added 100
+while number <= 100:
+    # Add the current number to the running total
+    total = total + number
+    # Move on to the next number
+    number = number + 1
+
+print(f"...Done! The answer is {total}.")
