@@ -12,3 +12,22 @@ else:
     print("Error: please enter a single character only.")
 
 print("Program Ended!")
+
+
+# Activity 2: ASCII Character
+print()
+print("Program Started!")
+print("Please enter an ASCII code:")
+# int() turns the text into a number, abs() removes any minus sign
+code = abs(int(input()))
+
+# Check the code is a printable character (32 to 126 inclusive)
+if code in range(32, 127):
+    # chr() gives the character for the ASCII code
+    character = chr(code)
+    print(f"The character represented by the ASCII code {code} is {character}.")
+else:
+    print("Error: please enter a number between 32 and 126.")
+
+print("Program Ended!")
+
