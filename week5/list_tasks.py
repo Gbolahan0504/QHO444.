@@ -1,6 +1,7 @@
 # Week 5 - Lists
-# Activity 1: Simple List
 
+
+# Activity 1: Simple List
 
 def directions():
     # Create a list of the moves available in the maze
@@ -14,12 +15,7 @@ def run_task1():
     print(directions())
 
 
-# Only run when this file is executed directly
-if __name__ == "__main__":
-    run_task1()
-
 # Activity 2: Indexing
-
 
 def movements():
     # Each direction is followed by the number of steps to take
@@ -36,3 +32,25 @@ def run_task2():
         direction = path[i]      # even index holds the direction
         steps = path[i + 1]      # next index holds the step count
         print(f"{direction} for {steps} steps")
+
+
+# Activity 3: Iterate
+
+def menu():
+    print("Please select a direction:")
+    # Get the list of directions from Activity 1
+    steps = directions()
+    # Loop through each index so we can show the number next to each direction
+    for index in range(len(steps)):
+        direction = steps[index]
+        print(f"{index}: {direction}")
+
+
+def run_task3():
+    # Show the menu of directions
+    menu()
+
+
+# Only run when this file is executed directly
+if __name__ == "__main__":
+    run_task3()
