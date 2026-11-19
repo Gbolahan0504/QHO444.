@@ -112,5 +112,42 @@ def create_ladder():
 create_ladder()
 
 
+# Activity 2: Return Values
+
+def sum_weights(person, inventory):
+    # Add the two weights and send back the total
+    return person + inventory
+
+
+def calc_avg_weight(person, inventory):
+    # Reuse sum_weights to get the total, then divide by the 2 items
+    total = sum_weights(person, inventory)
+    return total / 2
+
+
+def run():
+    print()
+    print("What is the weight of the person?")
+    person = int(input())
+    print()
+    print("What is the weight of their inventory?")
+    inventory = int(input())
+    print()
+    print("What would you like to calculate (sum or average)?")
+    choice = input()
+    print()
+    # Show the result the user asked for
+    if choice == "sum":
+        print(f"The sum of weights is {sum_weights(person, inventory)}.")
+    elif choice == "average":
+        print(f"The average weight is {calc_avg_weight(person, inventory)}.")
+
+
+# Run the program
+run()
+
+
+
+
 
 
