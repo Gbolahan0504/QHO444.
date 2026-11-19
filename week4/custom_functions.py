@@ -51,3 +51,23 @@ escape_by("jumping over")
 escape_by("running around")
 escape_by("cross bridge ahead")
 
+
+# Activity 4: Loop
+
+def cross_bridge(steps):
+    # Show a message for each step crossed
+    for step in range(steps):
+        print("Crossed step.")
+    # Check whether the bridge was too long to cross safely
+    if steps > 5:
+        print("The bridge is collapsing!")
+    else:
+        print("We must keep going!")
+
+
+# Cross a short bridge, then a long one
+print()
+cross_bridge(3)
+cross_bridge(6)
+
+
