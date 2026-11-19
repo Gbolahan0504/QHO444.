@@ -65,3 +65,22 @@ print()
 print("Done!")
 
 
+# Activity 5: Reverse Word
+print()
+print("What phrase do you want to see in reverse?")
+phrase = input()
+print()
+print("Reversing...")
+print()
+
+# Start with empty text and build the reversed phrase one character at a time
+reversed_phrase = ""
+
+# Go from the last index down to 0
+for position in range(len(phrase) - 1, -1, -1):
+    reversed_phrase = reversed_phrase + phrase[position]
+
+print(f"The phrase is: {reversed_phrase}")
+
+
+
