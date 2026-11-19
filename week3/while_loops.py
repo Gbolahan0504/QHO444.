@@ -52,3 +52,24 @@ while charged < bars:
 
 print()
 print("The battery is fully charged.")
+
+
+# Activity 4: Repeating Word
+print()
+print("Please enter a phrase:")
+phrase = input()
+print()
+
+# Count the characters in the phrase, spaces included
+length = len(phrase)
+
+# Track how many times "Hi" has been shown
+count = 0
+
+# Show "Hi" once for each character, all on the same line
+while count < length:
+    print("Hi ", end="")
+    count = count + 1
+
+# Move to a new line once the loop is finished
+print()
