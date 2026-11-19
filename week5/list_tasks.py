@@ -17,3 +17,22 @@ def run_task1():
 # Only run when this file is executed directly
 if __name__ == "__main__":
     run_task1()
+
+# Activity 2: Indexing
+
+
+def movements():
+    # Each direction is followed by the number of steps to take
+    path = ["Move Forward", 10, "Move Backward", 5, "Move Left", 3, "Move Right", 1]
+    return path
+
+
+def run_task2():
+    print("Moving...")
+    # Store the returned list in a local variable
+    path = movements()
+    # Jump through the list two items at a time
+    for i in range(0, len(path), 2):
+        direction = path[i]      # even index holds the direction
+        steps = path[i + 1]      # next index holds the step count
+        print(f"{direction} for {steps} steps")
