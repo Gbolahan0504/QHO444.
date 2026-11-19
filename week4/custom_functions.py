@@ -71,3 +71,20 @@ cross_bridge(3)
 cross_bridge(6)
 
 
+# Activity 5: Multiple Parameters
+
+def climb_ladder(remaining, crossed):
+    # Compare the steps still to climb with the steps already climbed
+    if remaining > crossed:
+        print("Still some way to go!")
+    else:
+        print("We are almost there!")
+
+
+# Check progress at two points on the ladder
+print()
+climb_ladder(5, 2)
+climb_ladder(2, 5)
+
+
+
