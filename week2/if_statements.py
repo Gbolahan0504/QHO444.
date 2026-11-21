@@ -1,117 +1,129 @@
-# Activity 1: if statement
-print("What type of book is this?")
-book_type = input()
-print()
-
-# Check whether the book is an adventure book
-if book_type == "adventure":
- print("I like adventure books!")
-
-print()
-print("Finished reading book.")
+# Week 2 - Decisions
 
 
-# Activity 2: if...else statement
-print()
-print("Please enter the activity to be performed.")
-activity = input()
-print()
+def adventure_book():
+    # Activity 1: if statement
+    print("What type of book is this?")
+    book_type = input()
+    print()
 
-# Check whether the activity is calculate
-if activity == "calculate":
-    print("Performing calculations...")
-else:
-    print("Performing activity...")
+    # Check whether the book is an adventure book
+    if book_type == "adventure":
+        print("I like adventure books!")
 
-print()
-print("Activity completed!")
+    print()
+    print("Finished reading book.")
 
 
-# Activity 3: if...elif...else statement
-print()
-print("Towards which direction should I go (up, down, left or right)?")
-direction = input()
-print()
+def perform_activity():
+    # Activity 2: if...else statement
+    print("Please enter the activity to be performed.")
+    activity = input()
+    print()
 
-# Work out which direction the robot should move
-if direction == "up":
-    print("I am moving in an upward direction!")
+    # Check whether the activity is calculate
+    if activity == "calculate":
+        print("Performing calculations...")
+    else:
+        print("Performing activity...")
 
-elif direction == "down":
-    print("I am moving in an downward direction!")
-elif direction == "left":
-    print("I am moving to the left!")
-elif direction == "right":
-    print("I am moving to the right!")
-else:
-    print("I do not know that direction!")
+    print()
+    print("Activity completed!")
 
 
-# Activity 4: Modulo operator
-print()
-print("Please enter a whole number.")
-number = int(input())
-print()
+def robot_direction():
+    # Activity 3: if...elif...else statement
+    print("Towards which direction should I go (up, down, left or right)?")
+    direction = input()
+    print()
 
-# A number is even if dividing by 2 leaves no remainder
-if number % 2 == 0:
-    print(f"The number {number} is an even number.")
-
-else:
-    print(f"The number {number} is an odd number.")
-
-
-# Activity 5: Comparison operators
-print()
-print("Please enter the first number.")
-first_number = float(input())
-print("Please enter the second number.")
-second_number = float(input())
-print()
-
-# Decide which number is the smallest
-if first_number < second_number:
-    print("The first number is the smallest!")
-elif second_number < first_number:
-    print("The second number is the smallest!")
-else:
-    print("Both are equal!")
+    # Work out which direction the robot should move
+    if direction == "up":
+        print("I am moving in an upward direction!")
+    elif direction == "down":
+        print("I am moving in an downward direction!")
+    elif direction == "left":
+        print("I am moving to the left!")
+    elif direction == "right":
+        print("I am moving to the right!")
+    else:
+        print("I do not know that direction!")
 
 
-# Activity 6: Counter
-print()
+def even_or_odd():
+    # Activity 4: Modulo operator
+    print("Please enter a whole number.")
+    number = int(input())
+    print()
 
-# Start both counters at zero
-even_count = 0
-odd_count = 0
-
-# First number
-print("Please enter the first whole number.")
-number_one = int(input())
-if number_one % 2 == 0:
-    even_count += 1
-else:
-    odd_count += 1
-
-# Second number
-print("Please enter the second whole number.")
-number_two = int(input())
+    # A number is even if dividing by 2 leaves no remainder
+    if number % 2 == 0:
+        print(f"The number {number} is an even number.")
+    else:
+        print(f"The number {number} is an odd number.")
 
 
-if number_two % 2 == 0:
-    even_count += 1
-else:
-    odd_count += 1
-# Third number
-print("Please enter the third whole number.")
-number_three = int(input())
-if number_three % 2 == 0:
-    even_count += 1
-else:
-    odd_count += 1
+def smallest_number():
+    # Activity 5: Comparison operators
+    print("Please enter the first number.")
+    first_number = float(input())
+    print("Please enter the second number.")
+    second_number = float(input())
+    print()
 
-print()
-print(f"There were {even_count} even and {odd_count} odd numbers.")
+    # Decide which number is the smallest
+    if first_number < second_number:
+        print("The first number is the smallest!")
+    elif second_number < first_number:
+        print("The second number is the smallest!")
+    else:
+        print("Both are equal!")
 
 
+def count_even_odd():
+    # Activity 6: Counter
+    # Start both counters at zero
+    even_count = 0
+    odd_count = 0
 
+    # First number
+    print("Please enter the first whole number.")
+    number_one = int(input())
+    if number_one % 2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+
+    # Second number
+    print("Please enter the second whole number.")
+    number_two = int(input())
+    if number_two % 2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+
+    # Third number
+    print("Please enter the third whole number.")
+    number_three = int(input())
+    if number_three % 2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+
+    print()
+    print(f"There were {even_count} even and {odd_count} odd numbers.")
+
+
+# Only run when this file is executed directly
+if __name__ == "__main__":
+    adventure_book()
+    print()
+    perform_activity()
+    print()
+    robot_direction()
+    print()
+    even_or_odd()
+    print()
+    smallest_number()
+    print()
+    count_even_odd()
