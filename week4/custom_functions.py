@@ -8,8 +8,7 @@ def listen():
     print(f"That was a loud {sound}!")
 
 
-# Call the function so it runs
-listen()
+
 
 
 # Activity 2: Nesting
@@ -27,8 +26,6 @@ def identify():
         print("We will be fine.")
 
 
-# Call the function so it runs
-identify()
 
 
 # Activity 3: Parameters
@@ -45,11 +42,7 @@ def escape_by(plan):
         print("We cannot escape that way! The boulder is in the way!")
 
 
-# Try three different escape plans
-print()
-escape_by("jumping over")
-escape_by("running around")
-escape_by("cross bridge ahead")
+
 
 
 # Activity 4: Loop
@@ -65,10 +58,7 @@ def cross_bridge(steps):
         print("We must keep going!")
 
 
-# Cross a short bridge, then a long one
-print()
-cross_bridge(3)
-cross_bridge(6)
+
 
 
 # Activity 5: Multiple Parameters
@@ -81,11 +71,7 @@ def climb_ladder(remaining, crossed):
         print("We are almost there!")
 
 
-# Check progress at two points on the ladder
-print()
-climb_ladder(5, 2)
-climb_ladder(2, 5)
-
+#
 
 # Activity 1: Multiple User Defined Functions
 
@@ -108,8 +94,6 @@ def create_ladder():
     display_ladder(steps)
 
 
-# Call the second function, which calls the first one
-create_ladder()
 
 
 # Activity 2: Return Values
@@ -143,8 +127,7 @@ def run():
         print(f"The average weight is {calc_avg_weight(person, inventory)}.")
 
 
-# Run the program
-run()
+
 
 
 # Activity 3: Word Manipulation
@@ -216,8 +199,26 @@ def run_word_program():
         print("That is not a valid option.")
 
 
-# Run the word program
-run_word_program()
+# Only run when this file is executed directly
+if __name__ == "__main__":
+    listen()
+    identify()
+    print()
+    escape_by("jumping over")
+    escape_by("running around")
+    escape_by("cross bridge ahead")
+    print()
+    cross_bridge(3)
+    cross_bridge(6)
+    print()
+    climb_ladder(5, 2)
+    climb_ladder(2, 5)
+    create_ladder()
+    run()
+    run_word_program()
+
+
+
 
 
 
