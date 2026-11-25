@@ -44,6 +44,40 @@ def run_task2():
     plt.show()
 
 
+# Activity 3: Path with Line Plots
+
+def coordinate():
+    print("Please enter an x value:")
+    x = int(input())
+    print("Please enter a y value:")
+    y = int(input())
+    # Send back both values together as a tuple
+    return (x, y)
+
+
+def path():
+    print("Retrieving path...")
+    x_values = []
+    y_values = []
+    # Ask for 4 points
+    for count in range(4):
+        data = coordinate()
+        # The tuple holds x at [0] and y at [1]
+        x_values.append(data[0])
+        y_values.append(data[1])
+    return [x_values, y_values]
+
+
+def run_task3():
+    values = path()
+    # Label the axes
+    plt.xlabel("x values")
+    plt.ylabel("y values")
+    # Red dashed line with circle markers
+    plt.plot(values[0], values[1], "ro--")
+    plt.show()
+
+
 # Only run when this file is executed directly
 if __name__ == "__main__":
-    run_task2()
+    run_task3()
