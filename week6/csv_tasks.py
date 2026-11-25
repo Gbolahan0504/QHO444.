@@ -22,5 +22,25 @@ def run_task1():
 
 
 # Only run when this file is executed directly
+# Activity 2: Extract Values from CSV
+
+def extract(file_path):
+    print("Extracting...", end="")
+    with open(file_path) as file:
+        csv_reader = csv.reader(file)
+        # Read the headings but do nothing with them, just to skip past them
+        next(csv_reader)
+        names = ""
+        # Take the name (index 1) from each row
+        for values in csv_reader:
+            names = names + values[1] + "\n"
+    print("Done! The extracted items are as follows:")
+    print(names)
+
+
+def run_task2():
+    extract("clothing.csv")
+
+
 if __name__ == "__main__":
-    run_task1()
+    run_task2()
