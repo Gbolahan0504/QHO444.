@@ -20,6 +20,41 @@ def run():
 
 
 # Only run when this file is executed directly
+# Activity 4: Writing to a File
+
+def search_books(file_path):
+    print("Searching...", end="")
+    # Two pieces of text to sort the lines into
+    sections = ""
+    books = "Books:\n"
+    with open(file_path) as file:
+        for line in file:
+            # Remove the hidden new-line character from the end
+            line = line.strip()
+            # Lines starting with "Section" are sections, the rest are books
+            if line.startswith("Section"):
+                sections = sections + line + "\n"
+            else:
+                books = books + line + "\n"
+    print("Done!")
+    # Join the two pieces with two new lines between them
+    return f"{sections}\n\n{books}"
+
+
+def save(file_path, data):
+    print("Saving...", end="")
+    # "w" opens the file for writing (it is created if it does not exist)
+    with open(file_path, "w") as file:
+        file.write(data)
+    print("Done!")
+
+
+def run_task4():
+    # Sort the books, then save the result to a new file
+    data = search_books("books.txt")
+    save("section-books.txt", data)
+
+
 # Activity 3: Reading a File line by line
 
 def search(file_path):
@@ -69,4 +104,4 @@ def run_task2():
 
 
 if __name__ == "__main__":
-    run_task3()
+    run_task4()
