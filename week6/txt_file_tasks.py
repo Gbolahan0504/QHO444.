@@ -20,6 +20,22 @@ def run():
 
 
 # Only run when this file is executed directly
+# Activity 3: Reading a File line by line
+
+def search(file_path):
+    print("Searching...")
+    # Open the file and go through it one line at a time
+    with open(file_path) as file:
+        for line in file:
+            print(f"Looked in {line.strip()}")
+    print("...Done!")
+
+
+def run_task3():
+    # Search through the library sections
+    search("library.txt")
+
+
 # Activity 2: Reading a File
 
 def display_chars(file_path, chars):
@@ -53,4 +69,4 @@ def run_task2():
 
 
 if __name__ == "__main__":
-    run_task2()
+    run_task3()
