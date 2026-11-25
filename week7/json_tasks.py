@@ -20,5 +20,29 @@ def run():
 
 
 # Only run when this file is executed directly
+# Activity 2: Exporting to a JSON file
+
+def read_task2(file_path):
+    print("Reading...", end="")
+    with open(file_path) as file:
+        data = json.load(file)
+    print("Done!")
+    return data
+
+
+def save(file_path, data):
+    print("Exporting...", end="")
+    # "w" opens the file for writing (it is created if it does not exist)
+    with open(file_path, "w") as file:
+        # Write the data as JSON, indented 4 spaces per level
+        json.dump(data, file, indent=4)
+    print("Done!")
+
+
+def run_task2():
+    json_data = read_task2("futurama.json")
+    save("exported.json", json_data)
+
+
 if __name__ == "__main__":
-    run()
+    run_task2()
