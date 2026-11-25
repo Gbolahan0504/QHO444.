@@ -1,5 +1,6 @@
 # Week 8 - Plots
 import matplotlib.pyplot as plt
+import random
 
 
 # Activity 1: Simple Line Plot
@@ -78,6 +79,41 @@ def run_task3():
     plt.show()
 
 
+# Activity 4: Data Dictionary and Plots
+
+def data():
+    paths = {}
+    # Store each of the user's choices in the dictionary under its own key
+    print("What type of line would you like (:, -- or -)?")
+    paths["line"] = input()
+    print("What colour would you like (r, g or b)?")
+    paths["colour"] = input()
+    print("What style of marker would you like (o, s or ^)?")
+    paths["marker"] = input()
+    return paths
+
+
+def generate():
+    print("How many lines would you like to display?")
+    lines = int(input())
+    for count in range(lines):
+        values = data()
+        # 5 different random numbers from 1 to 10 (x sorted so the line runs left to right)
+        x = sorted(random.sample(range(1, 11), 5))
+        y = random.sample(range(1, 11), 5)
+        # Join the choices into one style code, e.g. "r" + "o" + "--" gives "ro--"
+        style = values["colour"] + values["marker"] + values["line"]
+        plt.plot(x, y, style)
+    # Show all the lines together on one graph
+    plt.show()
+
+
+def run():
+    print("Running....")
+    generate()
+    print("Done!")
+
+
 # Only run when this file is executed directly
 if __name__ == "__main__":
-    run_task3()
+    run()
